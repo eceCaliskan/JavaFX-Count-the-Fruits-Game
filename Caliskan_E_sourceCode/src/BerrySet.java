@@ -24,10 +24,11 @@ public class BerrySet extends GameObject {
 		// TODO Auto-generated method stub
 		return img; //returns the image
 	}
+	
 	public void update()
-	   {
+        {
 	        if(img!=null )
 		    gc.drawImage(img, x, y, 70, 90);//sets the size of the image
 	        
-	   }
+        }
 }
