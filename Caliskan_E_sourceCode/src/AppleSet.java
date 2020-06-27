@@ -22,12 +22,12 @@ public class AppleSet extends GameObject {
 		// TODO Auto-generated method stub
 		return img;
 	}
+	
 	public void update()
-	   {
+	{
 	        if(img!=null )
 		    gc.drawImage(img, x, y, 90, 90);  //set the size of the image
-	        
-	   }
+	}
 }
 
 
