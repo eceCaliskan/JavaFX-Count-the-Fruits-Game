@@ -70,18 +70,18 @@ public class GameApp extends Application {
 	
 		public static void main(String[] args) {
 		// TODO Auto-generated method stub
-        launch(args);
+                launch(args);
 	    }
 
 	
 	   @Override
 	    public void start(Stage primaryStage) throws Exception {
 		
-		    this.scene1(primaryStage);
-			this.scene2(primaryStage);
-			this.scene6(primaryStage);
+	                this.scene1(primaryStage);
+	                this.scene2(primaryStage);
+		        this.scene6(primaryStage);
 			this.scene5(primaryStage);
-            this.scene4(primaryStage);
+                        this.scene4(primaryStage);
 			timer.start();
 			this.scene3(primaryStage);
 			timer.start();
@@ -99,7 +99,7 @@ public class GameApp extends Application {
 		
 		     root = new Pane();
 		     scene = new Scene(root,850,500);
-             primaryStage.setScene(scene);
+                     primaryStage.setScene(scene);
 		     primaryStage.show();
 		
 		     Label l = new Label("WELCOME TO MY FARM");     //adding a new label 
@@ -112,11 +112,11 @@ public class GameApp extends Application {
 		     graphicsC.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
 		     root.getChildren().addAll(canvas);
 		
-	         img = new Image("image/cartoon.jpg");         //including image as a background
+	             img = new Image("image/cartoon.jpg");         //including image as a background
 		     graphicsC.drawImage(img ,0,0);
 		
 		     Button button1 = new Button("START");         //setting the position and designing the start button
-             button1.setOnAction(e->primaryStage.setScene(scene1));
+                     button1.setOnAction(e->primaryStage.setScene(scene1));
 		     button1.setLayoutX(280);
 		     button1.setLayoutY(150);
 		     button1.setMinSize(280, 180);
@@ -215,7 +215,7 @@ public class GameApp extends Application {
 		root.getChildren().addAll(canvas);
 		
 		
-	    game = new GameFactory(graphicsC);
+	        game = new GameFactory(graphicsC);
 		Random m = new Random();
 		int f = m.nextInt(5);
 		
@@ -227,21 +227,22 @@ public class GameApp extends Application {
 			 
 			  list.add(game.createProduct("redApple", x, y));   //creates RedApple object and add it to the list
 			  x = m.nextInt(250);
-		      y = m.nextInt(200);
-		      list.add(game.createProduct("pinkApple", x, y));  //creates PinkApple object and add it to the list
-		
-		      x = m.nextInt(300);
-              y = m.nextInt(300);
-              list.add(game.createProduct("blueApple", x, y)); //creates YellowApple object and add it to the list
-        }
+		          y = m.nextInt(200);
+		          
+			  list.add(game.createProduct("pinkApple", x, y));  //creates PinkApple object and add it to the list
+		          x = m.nextInt(300);
+                          y = m.nextInt(300);
+                          
+			  list.add(game.createProduct("blueApple", x, y)); //creates YellowApple object and add it to the list
+               }
 		
 		
 		Label label = new Label("How many RED APPLES do I have?" ); //setting the label
 		label.setFont(new Font("Arial", 20));
 		label.setLayoutX(510);
 		label.setLayoutY(200);
-	    root.getChildren().add(label);
-	    check(f, label, primaryStage, "scene3"); //calling the method check() to check the result
+	        root.getChildren().add(label);
+	        check(f, label, primaryStage, "scene3"); //calling the method check() to check the result
 		
 	}
 	
@@ -264,7 +265,7 @@ public class GameApp extends Application {
 		graphicsC.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
 		root.getChildren().addAll(canvas);
 		
-	    game = new GameFactory(graphicsC);
+	        game = new GameFactory(graphicsC);
 		
 		Random m = new Random();
 		
@@ -274,7 +275,7 @@ public class GameApp extends Application {
 		
 		for(int i =0; i<=f; i++) { //to create multiple objects
 		     
-			   list.add(game.createProduct("greenPear", x, y));  //creates GreenPear objects and add it to the list
+		       list.add(game.createProduct("greenPear", x, y));  //creates GreenPear objects and add it to the list
 		
 		       x = m.nextInt(250);
 		       y = m.nextInt(200);
@@ -283,7 +284,7 @@ public class GameApp extends Application {
 		
 	    	
 		       x = m.nextInt(350);
-	           y = m.nextInt(300);
+	               y = m.nextInt(300);
 		       list.add(game.createProduct("redPear", x, y));    //creates RedPear objects and add it to the list
         }
 		
@@ -292,9 +293,9 @@ public class GameApp extends Application {
 		label.setFont(new Font("Arial", 20));
 		label.setLayoutX(510);
 		label.setLayoutY(200);
-	    root.getChildren().add(label);
+	        root.getChildren().add(label);
 		
-	    check(f, label, primaryStage, "scene4");  //calling the method check() to check the result
+	        check(f, label, primaryStage, "scene4");  //calling the method check() to check the result
 	}
 
 
@@ -315,7 +316,7 @@ public class GameApp extends Application {
 		graphicsC.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
 		root.getChildren().addAll(canvas);
 		
-	    game = new GameFactory(graphicsC);
+	        game = new GameFactory(graphicsC);
 		
 		Random m = new Random();
 		
@@ -330,25 +331,23 @@ public class GameApp extends Application {
 			 list.add(game.createProduct("orange", x, y)); //creates orange object and add it to the list
 		    
 			 x = m.nextInt(250);
-		     y = m.nextInt(200);
-	    	
-		     list.add(game.createProduct("yellowOrange", x, y)); //creates a YellowOrange object and add it to the list
+		         y = m.nextInt(200);
+	    	         list.add(game.createProduct("yellowOrange", x, y)); //creates a YellowOrange object and add it to the list
 		
-	    	 x = m.nextInt(350);
-	         y = m.nextInt(300);
-	        
-	         list.add(game.createProduct("greenOrange", x, y)); //creates a GreenOrange Object and add it to the list
+	    	         x = m.nextInt(350);
+	                 y = m.nextInt(300);
+	                 list.add(game.createProduct("greenOrange", x, y)); //creates a GreenOrange Object and add it to the list
 
-       }
+                }
 		
 		
 		Label label = new Label("How many ORANGES do I have?" ); //creating a label object
 		label.setFont(new Font("Arial", 20));
 		label.setLayoutX(510);
 		label.setLayoutY(200);
-	    root.getChildren().add(label);
+	        root.getChildren().add(label);
 		
-	    check(f, label, primaryStage, "scene5");  //calling the method check() to check the result
+	        check(f, label, primaryStage, "scene5");  //calling the method check() to check the result
 		
 	        
 	}
@@ -385,23 +384,23 @@ public class GameApp extends Application {
 		    x = m.nextInt(250);
 		    y = m.nextInt(200);
 		    
-	    	list.add(game.createProduct("blackberry", x, y));  //create a new Blackberry object and add it to the list
+	    	   list.add(game.createProduct("blackberry", x, y));  //create a new Blackberry object and add it to the list
 		
-	    	x = m.nextInt(350);
-	        y = m.nextInt(300);
+	    	    x = m.nextInt(350);
+	            y = m.nextInt(300);
 	        
-	        list.add(game.createProduct("purpleberry", x, y)); //create a new Purpleberry object and add it to the list
+	            list.add(game.createProduct("purpleberry", x, y)); //create a new Purpleberry object and add it to the list
 
-       }
+                }
 		
 		
 		Label label = new Label("How many Blackberries do I have?" );
 		label.setFont(new Font("Arial", 20));
 		label.setLayoutX(510);
 		label.setLayoutY(200);
-	    root.getChildren().add(label);
+	        root.getChildren().add(label);
 		
-	    check(f, label, primaryStage, "scene6");  //calling the method check() to check the result
+	        check(f, label, primaryStage, "scene6");  //calling the method check() to check the result
 		
 	        
 	}
@@ -428,16 +427,16 @@ public class GameApp extends Application {
 		exit.setStyle("-fx-background-color: green;" );
 		root.getChildren().add(exit);
 		
-	    StackPane sp = new StackPane();
+	        StackPane sp = new StackPane();
 		list.add(game.createProduct("farmer", 500, 00));
 		list.add(game.createProduct("tree", -100, -70));
 	    
 		
 		button1 = new Button("1");  //creating the button 1
-	    button1.setLayoutX(550);
-	    button1.setLayoutY(280);
-	    button1.setStyle("-fx-background-color: red;");
-	    EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() { 
+	        button1.setLayoutX(550);
+	        button1.setLayoutY(280);
+	        button1.setStyle("-fx-background-color: red;");
+	        EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() { 
 	            public void handle(ActionEvent e) 
 	            { 
 	            	if(f==0) {                         //if the answer is 0 
@@ -457,14 +456,13 @@ public class GameApp extends Application {
 	            }
 	        }; 
 	  
-	   button1.setOnAction(event);
+	        button1.setOnAction(event);
 	  
-	    
-	   button2 = new Button("2");   //creating the button 2
-	   button2.setStyle("-fx-background-color: orange;");
-	   button2.setLayoutX(600);
-	   button2.setLayoutY(280);
-	   EventHandler<ActionEvent> event2 = new EventHandler<ActionEvent>() { 
+	        button2 = new Button("2");   //creating the button 2
+	        button2.setStyle("-fx-background-color: orange;");
+	        button2.setLayoutX(600);
+	        button2.setLayoutY(280);
+	        EventHandler<ActionEvent> event2 = new EventHandler<ActionEvent>() { 
 	             public void handle(ActionEvent e) 
                  { 
             	     if(f==1) {                           //if the answer is 1
@@ -481,9 +479,9 @@ public class GameApp extends Application {
             	          label.setText(" INCORRECT ");       // text
             	  }
                   }
-        }; 
+                  }; 
         
-        button2.setOnAction(event2);
+            button2.setOnAction(event2);
         
 	    
 	    button3 = new Button("3");          //creating the button 3
@@ -514,10 +512,10 @@ public class GameApp extends Application {
 	  
 	   button4 = new Button("4");                           //creating the button 4
 	   button4.setLayoutX(700); 
-       button4.setLayoutY(280);
-       button4.setStyle("-fx-background-color: red;");
+           button4.setLayoutY(280);
+           button4.setStyle("-fx-background-color: red;");
 	         
-       EventHandler<ActionEvent> event4 = new EventHandler<ActionEvent>() { 
+           EventHandler<ActionEvent> event4 = new EventHandler<ActionEvent>() { 
 		        public void handle(ActionEvent e) 
 	            { 
 	            	if(f==3) {
@@ -540,8 +538,8 @@ public class GameApp extends Application {
 	       
 	  button5 = new Button("5");                           //creating the button 5
 	  button5.setLayoutX(750);
-      button5.setLayoutY(280);
-      button5.setStyle("-fx-background-color: yellow;");
+          button5.setLayoutY(280);
+          button5.setStyle("-fx-background-color: yellow;");
 	        
 	  EventHandler<ActionEvent> event5 = new EventHandler<ActionEvent>() { 
 		        public void handle(ActionEvent e) 
@@ -561,7 +559,7 @@ public class GameApp extends Application {
 	            	}
 	            }
 	        };  
-     button5.setOnAction(event5);  
+         button5.setOnAction(event5);  
      
 	 root.getChildren().addAll(button1,button2, button3, button4, button5);
 	     
