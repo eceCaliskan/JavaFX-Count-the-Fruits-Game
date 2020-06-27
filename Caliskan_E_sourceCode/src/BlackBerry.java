@@ -11,7 +11,9 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 
 public class BlackBerry extends BerrySet {
-int dx=2;
+
+	int dx=2;
+	
 	public BlackBerry(GraphicsContext gc, double x, double y) {
 		super(gc, x, y); //call to the superclass
 	}
@@ -19,6 +21,7 @@ int dx=2;
 	public Image getImage() {
 		return new Image("image/blackberry.png");  //gets the new image
 	}
+	
 	public void update() {   //make the object move
 		x+=dx;
 		if(x>400 || x<0) {
